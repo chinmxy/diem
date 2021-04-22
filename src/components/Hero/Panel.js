@@ -19,20 +19,22 @@ const Panel = () => {
         </>
       ),
     },
-    { value: "strawberry", label: "Strawberry" },
+    { value: "st", label: "ST" },
     { value: "vanilla", label: "Vanilla" },
   ];
 
   const customStyles = {
+    // menu: () => ({
+    //   width: 500,
+    // }),
+    input: () => ({
+      width: 100,
+    }),
     option: (provided, state) => ({
       ...provided,
       borderBottom: "1px dotted pink",
       color: state.isSelected ? "red" : "blue",
       padding: 10,
-    }),
-    control: () => ({
-      // none of react-select's styles are passed to <Control />
-      width: 200,
     }),
 
     singleValue: (provided, state) => {
@@ -68,19 +70,17 @@ const Panel = () => {
               type='text'
               name='price'
               id='price'
-              className='focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-7 pr-12 sm:text-sm border-gray-300 rounded-md'
+              className='focus:ring-indigo-500 focus:border-indigo-500 block h-10 w-full pl-7 pr-12 sm:text-sm border-gray-300 rounded-md'
               placeholder='0.00'
             />
-            <div className='absolute inset-y-0 right-0 flex items-center'>
-              <label htmlFor='currency' className='sr-only'>
-                Currency
-              </label>
-
+            <div className='absolute lg:w-24  inset-y-0 right-0 flex items-center'>
               <Select
+                styles={customStyles}
                 options={options}
+                width='200px'
                 theme={(theme) => ({
                   ...theme,
-                  borderRadius: 0,
+                  borderRadius: 2,
                   colors: {
                     ...theme.colors,
                     primary25: "primary25",
