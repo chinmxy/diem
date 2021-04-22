@@ -1,0 +1,8 @@
+input::-webkit-input-placeholder {
+	margin-left: 100px;
+}
+
+#submit-btn {
+	background: linear-gradient(90deg, #009f9b 0%, #38d9d5 96.65%);
+	border-radius: 60px;
+}
