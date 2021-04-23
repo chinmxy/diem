@@ -9,7 +9,7 @@ const Panel = () => {
 	return (
 		<div
 			className='flex flex-col justify-center items-center bg-white bg-opacity-60'
-			style={{ width: "480px", borderRadius: "40px" }}
+			style={{ width: "495px", borderRadius: "40px" }}
 		>
 			<div>
 				<h1 className='mt-14 mb-10 text-2xl font-bold'>
@@ -17,14 +17,14 @@ const Panel = () => {
 				</h1>
 			</div>
 
-			{/* <div>
-				<InputField />
-			</div> */}
+			<div></div>
 
 			<div
-				className='bg-white mb-8'
+				className='bg-white mb-8 flex items-center justify-center'
 				style={{ width: "418px", height: "84px", borderRadius: "20px" }}
-			></div>
+			>
+				<InputField />
+			</div>
 			<div
 				className='bg-white mb-8'
 				style={{ width: "418px", height: "84px", borderRadius: "20px" }}

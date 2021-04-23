@@ -3,8 +3,27 @@ import React, { useState } from "react";
 import Select from "react-select";
 import OptionItem from "./OptionItem";
 import FloatingLabelInput from "react-floating-label-input";
+import TextField from "@material-ui/core/TextField";
+import { makeStyles } from "@material-ui/core/styles";
 
 const InputField = () => {
+	const useStyles = makeStyles({
+		root: {
+			fontWeight: 700,
+		},
+		label: {
+			color: "red",
+		},
+		underline: {
+			"&&&:before": {
+				borderBottom: "none",
+			},
+			"&&:after": {
+				borderBottom: "none",
+			},
+		},
+	});
+
 	const options = [
 		{
 			value: "GBP",
@@ -17,9 +36,6 @@ const InputField = () => {
 	];
 
 	const customStyles = {
-		// menu: () => ({
-		//   width: 500,
-		// }),
 		input: () => ({
 			width: 100,
 		}),
@@ -41,9 +57,9 @@ const InputField = () => {
 	const [value, setValue] = useState("");
 
 	const onChange = () => {};
-
+	const classes = useStyles();
 	return (
-		<div>
+		<div className='flex flex-row space-x-4 items-center'>
 			{/* <FloatingLabelInput
 				id='example-3'
 				label='label'
@@ -52,13 +68,15 @@ const InputField = () => {
 				onFocus={action("onFocus")}
 				value={value}
 			/> */}
+
+			<TextField label='You Pay' color='dark' InputProps={{ classes }} />
 			<Select
 				styles={customStyles}
 				options={options}
 				width='200px'
 				theme={theme => ({
 					...theme,
-					borderRadius: 2,
+					borderRadius: 0,
 					colors: {
 						...theme.colors,
 						primary25: "primary25",

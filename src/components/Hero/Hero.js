@@ -83,18 +83,12 @@ const Hero = () => {
 										</a>
 									</div>
 								</div>
-								<div className='z-20 sm:z-20 lg:z-20 md:z-20 mt-16 sm:mt-24 lg:mt-0 lg:col-span-6'>
+								<div className='z-20 sm:z-20 lg:z-20 md:z-20 mt-16 sm:mt-24 lg:ml-24 lg:col-span-6'>
 									<div
 										className='mt-10 -mx-4 relative lg:mt-0'
 										aria-hidden='true'
 									>
 										<Panel />
-										{/* <img
-											className='relative mx-auto'
-											width='490'
-											src='https://tailwindui.com/img/features/feature-example-1.png'
-											alt=''
-										/> */}
 									</div>
 								</div>
 							</div>
