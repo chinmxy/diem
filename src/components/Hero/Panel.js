@@ -12,7 +12,10 @@ const Panel = () => {
 			style={{ width: "495px", borderRadius: "40px" }}
 		>
 			<div>
-				<h1 className='mt-14 mb-10 text-2xl font-bold'>
+				<h1
+					className='mt-14 mb-10 text-2xl font-bold'
+					style={{ fontFamily: "Montserrat", fontWeight: "bold" }}
+				>
 					Buy crypto to your wallet
 				</h1>
 			</div>
@@ -38,8 +41,18 @@ const Panel = () => {
 					style={{ width: "201px", height: "84px", borderRadius: "20px" }}
 				>
 					<div className='mt-3 ml-6 mb-5 space-y-2'>
-						<h1 className='font-normal text-sm'>Payment Method</h1>
-						<h3 className='font-bold text-sm'>Bank Transfer</h3>
+						<h1
+							className='font-normal text-sm'
+							style={{ fontFamily: "Montserrat" }}
+						>
+							Payment Method
+						</h1>
+						<h3
+							className='font-bold text-sm'
+							style={{ fontFamily: "Montserrat" }}
+						>
+							Bank Transfer
+						</h3>
 					</div>
 				</div>
 				<div
@@ -47,14 +60,27 @@ const Panel = () => {
 					style={{ width: "201px", height: "84px", borderRadius: "20px" }}
 				>
 					<div className='mt-3 ml-6 mb-5 space-y-2'>
-						<h1 className='font-normal text-sm'>Rate</h1>
-						<h3 className='font-bold text-sm'>46503.23GBP = 1 BTC</h3>
+						<h1
+							className='font-normal text-sm'
+							style={{ fontFamily: "Montserrat" }}
+						>
+							Rate
+						</h1>
+						<h3
+							className='font-bold text-sm'
+							style={{ fontFamily: "Montserrat" }}
+						>
+							46503.23GBP = 1 BTC
+						</h3>
 					</div>
 				</div>
 			</div>
 
 			<div className='self-end pr-14 flex flex-row items-center'>
-				<h3 className='text-sm font-normal' style={{ marginRight: "223px" }}>
+				<h3
+					className='text-sm font-normal'
+					style={{ marginRight: "223px", fontFamily: "Montserrat" }}
+				>
 					See Calculation
 				</h3>
 				<GoChevronDown />
@@ -66,7 +92,12 @@ const Panel = () => {
 					className='mt-14 mb-9 bg-red-300'
 					style={{ width: "418px", height: "81px", borderRadius: "60px" }}
 				>
-					<p className='font-bold text-2xl text-white'>Continue</p>
+					<p
+						className='font-bold text-2xl text-white'
+						style={{ fontFamily: "Montserrat" }}
+					>
+						Continue
+					</p>
 				</button>
 			</div>
 		</div>

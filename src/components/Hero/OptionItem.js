@@ -5,7 +5,9 @@ import ReactCountryFlag from "react-country-flag";
 const OptionItem = props => {
 	return (
 		<div className='flex flex-row items-center space-x-2'>
-			<p className='text-2xl font-normal'>{props.currency}</p>
+			<p className='text-2xl font-normal' style={{ fontFamily: "Montserrat" }}>
+				{props.currency}
+			</p>
 
 			<ReactCountryFlag
 				countryCode={props.countryCode}

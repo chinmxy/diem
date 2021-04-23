@@ -252,11 +252,11 @@ module.exports = {
 		},
 		fontFamily: {
 			sans: [
+				"-apple-system",
+				"BlinkMacSystemFont",
 				"Inter var",
 				"ui-sans-serif",
 				"system-ui",
-				"-apple-system",
-				"BlinkMacSystemFont",
 				'"Segoe UI"',
 				"Roboto",
 				'"Helvetica Neue"',
