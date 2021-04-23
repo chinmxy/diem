@@ -36,20 +36,27 @@ const InputField = () => {
 	];
 
 	const customStyles = {
-		input: () => ({
-			width: 100,
+		control: (provided, styles) => ({
+			...provided,
+			border: "0px solid black",
+			width: "175px",
 		}),
+		valueContainer: (provided, styles) => ({
+			...provided,
+			height: "60px",
+		}),
+		indicatorSeparator: () => ({}),
+
 		option: (provided, state) => ({
 			...provided,
 			borderBottom: "1px dotted pink",
-			color: state.isSelected ? "red" : "blue",
+			color: "black",
 			padding: 10,
 		}),
 
 		singleValue: (provided, state) => {
 			const opacity = state.isDisabled ? 0.5 : 1;
 			const transition = "opacity 300ms";
-
 			return { ...provided, opacity, transition };
 		},
 	};
@@ -59,7 +66,7 @@ const InputField = () => {
 	const onChange = () => {};
 	const classes = useStyles();
 	return (
-		<div className='flex flex-row space-x-4 items-center'>
+		<div className='flex flex-row items-center'>
 			{/* <FloatingLabelInput
 				id='example-3'
 				label='label'
@@ -69,8 +76,15 @@ const InputField = () => {
 				value={value}
 			/> */}
 
-			<TextField label='You Pay' color='dark' InputProps={{ classes }} />
+			<TextField
+				className='ml-4'
+				label='You Pay'
+				color='dark'
+				InputProps={{ classes }}
+			/>
 			<Select
+				defaultValue={options[0]}
+				isSearchable={false}
 				styles={customStyles}
 				options={options}
 				width='200px'

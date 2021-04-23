@@ -26,9 +26,11 @@ const Panel = () => {
 				<InputField />
 			</div>
 			<div
-				className='bg-white mb-8'
+				className='bg-white mb-8 flex items-center justify-center'
 				style={{ width: "418px", height: "84px", borderRadius: "20px" }}
-			></div>
+			>
+				<InputField />
+			</div>
 
 			<div className='flex flex-row space-x-4 mb-7'>
 				<div
