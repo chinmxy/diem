@@ -1,5 +1,5 @@
 import React from "react";
-import { FaCheckCircle } from "react-icons/fa";
+
 import { IoIosCheckmarkCircle } from "react-icons/io";
 import handEmoji from "./hand-emoji.svg";
 
@@ -14,7 +14,7 @@ const Offer = () => {
 						<h1 className='text-5xl font-bold'>What do</h1>
 						<h1 className='text-5xl font-bold'>we offer?</h1>
 					</div>
-					<img id='hand-emoji' src={handEmoji} />
+					<img id='hand-emoji' src={handEmoji} alt='hand-emoji' />
 				</div>
 				<div className='col-span-8 pr-12'>
 					<div className='flex flex-row justify-end space-x-3.5'>

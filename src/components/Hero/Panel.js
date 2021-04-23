@@ -1,109 +1,74 @@
-import React, { useState } from "react";
-import ReactCountryFlag from "react-country-flag";
-import Select from "react-select";
+import React from "react";
+
+import InputField from "./InputField";
+import { GoChevronDown } from "react-icons/go";
+
+import "../Contact/Contact.css";
 
 const Panel = () => {
-  const options = [
-    {
-      value: "chocolate",
-      label: (
-        <>
-          {" "}
-          <ReactCountryFlag
-            countryCode='US'
-            svg
-            style={{ width: "2em", height: "2em" }}
-            title='US'
-          />{" "}
-          <p>US</p>
-        </>
-      ),
-    },
-    { value: "st", label: "ST" },
-    { value: "vanilla", label: "Vanilla" },
-  ];
+	return (
+		<div
+			className='flex flex-col justify-center items-center bg-white bg-opacity-60'
+			style={{ width: "480px", borderRadius: "40px" }}
+		>
+			<div>
+				<h1 className='mt-14 mb-10 text-2xl font-bold'>
+					Buy crypto to your wallet
+				</h1>
+			</div>
 
-  const customStyles = {
-    // menu: () => ({
-    //   width: 500,
-    // }),
-    input: () => ({
-      width: 100,
-    }),
-    option: (provided, state) => ({
-      ...provided,
-      borderBottom: "1px dotted pink",
-      color: state.isSelected ? "red" : "blue",
-      padding: 10,
-    }),
+			{/* <div>
+				<InputField />
+			</div> */}
 
-    singleValue: (provided, state) => {
-      const opacity = state.isDisabled ? 0.5 : 1;
-      const transition = "opacity 300ms";
+			<div
+				className='bg-white mb-8'
+				style={{ width: "418px", height: "84px", borderRadius: "20px" }}
+			></div>
+			<div
+				className='bg-white mb-8'
+				style={{ width: "418px", height: "84px", borderRadius: "20px" }}
+			></div>
 
-      return { ...provided, opacity, transition };
-    },
-  };
+			<div className='flex flex-row space-x-4 mb-7'>
+				<div
+					className='bg-white'
+					style={{ width: "201px", height: "84px", borderRadius: "20px" }}
+				>
+					<div className='mt-3 ml-6 mb-5 space-y-2'>
+						<h1 className='font-normal text-sm'>Payment Method</h1>
+						<h3 className='font-bold text-sm'>Bank Transfer</h3>
+					</div>
+				</div>
+				<div
+					className='bg-white'
+					style={{ width: "201px", height: "84px", borderRadius: "20px" }}
+				>
+					<div className='mt-3 ml-6 mb-5 space-y-2'>
+						<h1 className='font-normal text-sm'>Rate</h1>
+						<h3 className='font-bold text-sm'>46503.23GBP = 1 BTC</h3>
+					</div>
+				</div>
+			</div>
 
-  return (
-    <div
-      className='flex flex-col justify-center items-center bg-red-200 rounded-lg'
-      style={{ width: "480px", height: "500px" }}
-    >
-      <div>
-        <h1 className='p-14 text-2xl font-bold'>Buy crypto to your wallet</h1>
-      </div>
+			<div className='self-end pr-14 flex flex-row items-center'>
+				<h3 className='text-sm font-normal' style={{ marginRight: "223px" }}>
+					See Calculation
+				</h3>
+				<GoChevronDown />
+			</div>
 
-      <div>
-        <div>
-          <label
-            htmlFor='price'
-            className='block text-sm font-medium text-gray-700'
-          >
-            Price
-          </label>
-          <div className='mt-1 relative rounded-md shadow-sm'>
-            <div className='absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none'>
-              <span className='text-gray-500 sm:text-sm'>$</span>
-            </div>
-            <input
-              type='text'
-              name='price'
-              id='price'
-              className='focus:ring-indigo-500 focus:border-indigo-500 block h-10 w-full pl-7 pr-12 sm:text-sm border-gray-300 rounded-md'
-              placeholder='0.00'
-            />
-            <div className='absolute lg:w-24  inset-y-0 right-0 flex items-center'>
-              <Select
-                styles={customStyles}
-                options={options}
-                width='200px'
-                theme={(theme) => ({
-                  ...theme,
-                  borderRadius: 2,
-                  colors: {
-                    ...theme.colors,
-                    primary25: "primary25",
-                    primary: "neutral5",
-                  },
-                })}
-              />
-
-              {/* <select
-				id="currency"
-				name="currency"
-				className="focus:ring-indigo-500 focus:border-indigo-500 h-full py-0 pl-2 pr-7 border-transparent bg-transparent text-gray-500 sm:text-sm rounded-md"
-			>
-				<option>USD</option>
-				<option>CAD</option>
-				<option>EUR</option>
-			</select> */}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+			<div>
+				<button
+					id='submit-btn'
+					className='mt-14 mb-9 bg-red-300'
+					style={{ width: "418px", height: "81px", borderRadius: "60px" }}
+				>
+					<p className='font-bold text-2xl text-white'>Continue</p>
+				</button>
+			</div>
+		</div>
+	);
 };
 
 export default Panel;
