@@ -1,20 +1,23 @@
 import React from "react";
 
-import ReactCountryFlag from "react-country-flag";
-
 const OptionItem = props => {
 	return (
-		<div className='flex flex-row items-center space-x-2'>
-			<p className='text-2xl font-normal' style={{ fontFamily: "Montserrat" }}>
+		<div className='flex flex-end items-center space-x-2'>
+			<p
+				className='text-2xl font-normal'
+				style={{ fontFamily: "Montserrat", color: "#636363" }}
+			>
 				{props.currency}
 			</p>
 
-			<ReactCountryFlag
+			<img src={props.icon} />
+
+			{/* <ReactCountryFlag
 				countryCode={props.countryCode}
 				svg
 				style={{ width: "3.8em", height: "3.8em", borderRadius: "5px" }}
 				title='US'
-			/>
+			/> */}
 		</div>
 	);
 };

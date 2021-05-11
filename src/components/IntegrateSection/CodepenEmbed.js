@@ -5,10 +5,10 @@ const CodepenEmbed = () => {
 	return (
 		<Codepen
 			defaultTab='html,result'
-			preview='false'
+			preview={false}
 			hash='bGdNxBa'
 			user='shettypuneeth'
-			height='600'
+			height={600}
 		/>
 	);
 };

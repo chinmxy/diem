@@ -288,6 +288,7 @@ module.exports = {
 			],
 		},
 		fontSize: {
+			xxs: ["0.6rem", { lineHeight: "1rem" }],
 			xs: ["0.75rem", { lineHeight: "1rem" }],
 			sm: ["0.875rem", { lineHeight: "1.25rem" }],
 			base: ["1rem", { lineHeight: "1.5rem" }],
@@ -554,18 +555,26 @@ module.exports = {
 			min: "min-content",
 			max: "max-content",
 			prose: "65ch",
+			305: "305px",
+			426: "426px",
+
 			...breakpoints(theme("screens")),
 		}),
 		minHeight: {
 			0: "0px",
 			full: "100%",
 			screen: "100vh",
+			0: "0",
+			135: "135px",
+			305: "305px",
 		},
 		minWidth: {
 			0: "0px",
 			full: "100%",
 			min: "min-content",
 			max: "max-content",
+			lg: "32rem",
+			375: "375px",
 		},
 		objectPosition: {
 			bottom: "bottom",

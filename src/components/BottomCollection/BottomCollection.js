@@ -8,18 +8,21 @@ import backgroundMask from "./background-mask.svg";
 
 const BottomCollection = () => {
 	return (
-		<>
+		<div className='relative'>
 			<div className='z-20'>
 				<IntegrateSection />
 			</div>
-			<div className='absolute' style={{ zIndex: "-99999", top: "4250px" }}>
+			<div
+				className='hidden lg:block lg:absolute'
+				style={{ zIndex: "-99999", bottom: "220px" }}
+			>
 				<img src={backgroundMask} style={{ width: "100vw" }} />
 			</div>
 			<div className='z-20'>
 				<Newsletter />
 				<Footer />
 			</div>
-		</>
+		</div>
 	);
 };
 

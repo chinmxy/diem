@@ -1,30 +1,67 @@
 import React from "react";
 
 import "./Contact.css";
+import YoFinger from "../../img/images/yo-finger.svg";
+import YoFingerBig from "../../img/images/yo-finger-big.svg";
 
 const Contact = () => {
 	return (
-		<div>
-			<>
+		<div className='relative'>
+			<div
+				className='absolute hidden lg:block lg:z-20'
+				style={{ top: "450px" }}
+			>
+				<img src={YoFingerBig} />
+			</div>
+			<div id='contact-us' className='lg:pt-12'>
 				<div className='relative bg-white'>
 					<div className='absolute inset-0'>
 						<div className='absolute inset-y-0 left-0 w-1/2 bg-white'></div>
 					</div>
 					<div className='relative max-w-7xl mx-auto lg:grid lg:grid-cols-5'>
 						<div className='bg-white py-16 px-4 sm:px-6 lg:col-span-3 lg:px-8 lg:py-24 xl:pr-12'>
-							<div className='max-w-lg mx-auto'>
-								<h1 className='text-5xl text-black'>Integrate Diem</h1>
-								<hr className='h-0.5 mt-8' style={{ color: "#C4C4C4" }} />
-								<h1 className='text-5xl font-bold mt-11'>
+							<div className='relative overflow-hidden max-w-lg mx-auto'>
+								<div className='flex flex-col lg:pl-0'>
+									<h1 className='text-2xl font-normal lg:text-5xl text-black'>
+										Integrate Merge
+									</h1>
+									<hr
+										className='mt-6 h-1 lg:h-0.5 lg:mt-8'
+										style={{ color: "#C4C4C4" }}
+									/>
+								</div>
+
+								<h1 className='hidden lg:block lg:text-5xl font-bold mt-11'>
 									Better, faster, cheaper fiat to crypto payments infrastructure
 								</h1>
+								<div className='lg:hidden flex flex-row relative overflow-hidden text-2xl font-bold mt-11'>
+									<div>
+										<h1>Better, faster, cheaper</h1>
+										<h1>fiat-to-crypto</h1>
+										<h1>payments</h1>
+										<h1>infrastructure</h1>
+									</div>
+								</div>
+								<div
+									className='lg:hidden'
+									style={{
+										position: "absolute",
+										right: "-50px",
+										top: "105px",
+									}}
+								>
+									<img src={YoFinger} />
+								</div>
 							</div>
 						</div>
-						<div className='bg-white py-16 px-4 sm:px-6 lg:col-span-2 lg:py-24 lg:px-8 xl:pl-12'>
+						<div className='bg-white py-16 px-6 sm:px-6 lg:col-span-2 lg:py-24 lg:px-8 xl:pl-12'>
 							<div className='max-w-lg mx-auto lg:max-w-none'>
-								<h1 className='text-3xl font-bold'>Contact Us</h1>
-								<h3 className='text-lg lg:mt-6' style={{ color: "#8692A6" }}>
-									Our team of experts are ready to hear you
+								<h1 className='text-lg lg:text-3xl font-bold'>Contact Us</h1>
+								<h3
+									className='text-sm lg:text-lg lg:mt-6'
+									style={{ color: "#8692A6" }}
+								>
+									Integrate Merge within minutes
 								</h3>
 								<hr className='my-7' />
 
@@ -46,7 +83,7 @@ const Contact = () => {
 											type='text'
 											name='full_name'
 											id='full_name'
-											autocomplete='name'
+											autoComplete='name'
 											className='outline-none block w-full py-6 px-7 placeholder-text-sm placeholder-gray-500 focus:ring-indigo-500 focus:border-indigo-500 border border-dough-grey rounded-md'
 											placeholder='Enter Full Name'
 										/>
@@ -64,7 +101,7 @@ const Contact = () => {
 											type='text'
 											name='email'
 											id='email'
-											autocomplete='email'
+											autoComplete='email'
 											className='outline-none block w-full py-6 px-7 placeholder-text-sm placeholder-gray-500 focus:ring-indigo-500 focus:border-indigo-500 border border-dough-grey rounded-md'
 											placeholder='Enter email address'
 										/>
@@ -103,7 +140,7 @@ const Contact = () => {
 						</div>
 					</div>
 				</div>
-			</>
+			</div>
 		</div>
 	);
 };

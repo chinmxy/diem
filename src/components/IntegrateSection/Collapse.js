@@ -13,10 +13,9 @@ const Collapse = () => {
 				trigger={<CollapseHeader name='Apply' />}
 				triggerWhenOpen={<CollapseCloseHeader name='Apply' />}
 			>
-				<h3 className='text-lg mt-4'>
-					Lorem Ipsum is simply dummy text of the printing and typesetting
-					industry. Lorem Ipsum has been the industry's standard dummy text ever
-					since the 1500s.
+				<h3 className='text-base lg:text-lg mt-4'>
+					Merge's API service is provided to a selected number of partners.
+					Contact us to request an API key.
 				</h3>
 			</Collapsible>
 			<hr
@@ -26,10 +25,8 @@ const Collapse = () => {
 				trigger={<CollapseHeader name='Authenticate' />}
 				triggerWhenOpen={<CollapseCloseHeader name='Authenticate' />}
 			>
-				<h3 className='text-lg mt-4'>
-					Lorem Ipsum is simply dummy text of the printing and typesetting
-					industry. Lorem Ipsum has been the industry's standard dummy text ever
-					since the 1500s.
+				<h3 className='text-base lg:text-lg mt-4'>
+					Verify your business using Token Based Authentication.
 				</h3>
 			</Collapsible>
 			<hr
@@ -39,10 +36,9 @@ const Collapse = () => {
 				trigger={<CollapseHeader name='Ready to use' />}
 				triggerWhenOpen={<CollapseCloseHeader name='Ready to use' />}
 			>
-				<h3 className='text-lg mt-4'>
-					Lorem Ipsum is simply dummy text of the printing and typesetting
-					industry. Lorem Ipsum has been the industry's standard dummy text ever
-					since the 1500s.
+				<h3 className='text-base lg:text-lg mt-4'>
+					Merge's widget is extremely user-friendly; designed to work smoothly
+					with all devices.
 				</h3>
 			</Collapsible>
 		</div>

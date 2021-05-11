@@ -1,19 +1,22 @@
 import React from "react";
 
+import { Link } from "react-router-dom";
+
 import InputField from "./InputField";
-import { GoChevronDown } from "react-icons/go";
+import InputField2 from "./InputField2";
+import CollapseField from "./CollapseField/CollapseField";
 
 import "../Contact/Contact.css";
 
 const Panel = () => {
 	return (
 		<div
-			className='flex flex-col justify-center items-center bg-white bg-opacity-60'
-			style={{ width: "495px", borderRadius: "40px" }}
+			className='m-4 p-4 max-w-lg shadow shadow-lg flex flex-col justify-center items-center bg-white bg-opacity-60'
+			style={{ borderRadius: "40px" }}
 		>
 			<div>
 				<h1
-					className='mt-14 mb-10 text-2xl font-bold'
+					className='text-lg mt-14 mb-10 lg:text-2xl font-bold'
 					style={{ fontFamily: "Montserrat", fontWeight: "bold" }}
 				>
 					Buy crypto to your wallet
@@ -23,51 +26,45 @@ const Panel = () => {
 			<div></div>
 
 			<div
-				className='bg-white mb-8 flex items-center justify-center'
-				style={{ width: "418px", height: "84px", borderRadius: "20px" }}
+				className='bg-white p-2 pl-4 lg:pl-4 lg:mx-4 mb-8 flex items-center justify-center'
+				style={{ borderRadius: "20px" }}
 			>
 				<InputField />
 			</div>
 			<div
-				className='bg-white mb-8 flex items-center justify-center'
-				style={{ width: "418px", height: "84px", borderRadius: "20px" }}
+				className='bg-white p-2 pl-4 lg:pl-4 lg:mx-4 mb-8 flex items-center justify-center'
+				style={{ borderRadius: "20px" }}
 			>
-				<InputField />
+				<InputField2 />
 			</div>
 
-			<div className='flex flex-row space-x-4 mb-7'>
-				<div
-					className='bg-white'
-					style={{ width: "201px", height: "84px", borderRadius: "20px" }}
-				>
+			<div className='flex flex-row w-full lg:px-4 space-x-4 lg:mb-7'>
+				<div className='bg-white w-full' style={{ borderRadius: "20px" }}>
 					<div className='mt-3 ml-6 mb-5 space-y-2'>
 						<h1
-							className='font-normal text-sm'
+							className='font-normal text-xs lg:text-sm'
 							style={{ fontFamily: "Montserrat" }}
 						>
 							Payment Method
 						</h1>
 						<h3
-							className='font-bold text-sm'
+							className='font-bold text-xs lg:text-sm'
 							style={{ fontFamily: "Montserrat" }}
 						>
 							Bank Transfer
 						</h3>
 					</div>
 				</div>
-				<div
-					className='bg-white'
-					style={{ width: "201px", height: "84px", borderRadius: "20px" }}
-				>
+				<div className='bg-white w-full' style={{ borderRadius: "20px" }}>
 					<div className='mt-3 ml-6 mb-5 space-y-2'>
 						<h1
-							className='font-normal text-sm'
+							className='font-normal text-xs lg:text-sm'
 							style={{ fontFamily: "Montserrat" }}
 						>
 							Rate
 						</h1>
 						<h3
-							className='font-bold text-sm'
+							className='font-bold text-xs lg:text-sm'
 							style={{ fontFamily: "Montserrat" }}
 						>
 							46503.23GBP = 1 BTC
@@ -76,29 +73,25 @@ const Panel = () => {
 				</div>
 			</div>
 
-			<div className='self-end pr-14 flex flex-row items-center'>
-				<h3
-					className='text-sm font-normal'
-					style={{ marginRight: "223px", fontFamily: "Montserrat" }}
-				>
-					See Calculation
-				</h3>
-				<GoChevronDown />
+			<div>
+				<CollapseField />
 			</div>
 
-			<div>
-				<button
-					id='submit-btn'
-					className='mt-14 mb-9 bg-red-300'
-					style={{ width: "418px", height: "81px", borderRadius: "60px" }}
-				>
-					<p
-						className='font-bold text-2xl text-white'
-						style={{ fontFamily: "Montserrat" }}
+			<div className='w-full'>
+				<a href='#contact-us'>
+					<div
+						id='submit-btn'
+						className='lg:mt-8 mb-9 p-2 lg:py-4 outline-none flex items-center justify-center'
+						style={{ borderRadius: "60px" }}
 					>
-						Continue
-					</p>
-				</button>
+						<p
+							className='font-bold text-lg lg:text-2xl text-white'
+							style={{ fontFamily: "Montserrat" }}
+						>
+							Contact Us
+						</p>
+					</div>
+				</a>
 			</div>
 		</div>
 	);

@@ -5,17 +5,17 @@ import OptionItem from "./OptionItem";
 import TextField from "@material-ui/core/TextField";
 import { makeStyles } from "@material-ui/core/styles";
 
-import GBPicon from "../../img/currency-icons/GBP.svg";
+// import "./InputField.css";
+
 import BTCicon from "../../img/currency-icons/BTC.svg";
 
-const InputField = props => {
+const InputField2 = props => {
 	const useStyles = makeStyles({
 		root: {
 			fontFamily: "Montserrat",
 			fontWeight: 900,
 			fontSize: "24px",
 		},
-
 		underline: {
 			"&&&:before": {
 				borderBottom: "none",
@@ -28,12 +28,12 @@ const InputField = props => {
 
 	const options = [
 		{
-			value: "GBP",
-			label: <OptionItem icon={GBPicon} countryCode='GB' currency='GBP' />,
+			value: "BTC",
+			label: <OptionItem icon={BTCicon} countryCode='GB' currency='BTC' />,
 		},
 		{
-			value: "USD",
-			label: <OptionItem icon={BTCicon} countryCode='US' currency='USD' />,
+			value: "ETH",
+			label: <OptionItem icon={BTCicon} countryCode='US' currency='ETH' />,
 		},
 	];
 
@@ -63,8 +63,10 @@ const InputField = props => {
 		},
 	};
 
-	const classes = useStyles();
+	const [value, setValue] = useState("");
 
+	const onChange = () => {};
+	const classes = useStyles();
 	return (
 		<div className='flex flex-row items-center'>
 			{/* <FloatingLabelInput
@@ -78,7 +80,7 @@ const InputField = props => {
 
 			<TextField
 				className='ml-4'
-				label='You Pay'
+				label='You Get'
 				InputProps={{ classes }}
 				InputLabelProps={{
 					style: {
@@ -88,7 +90,7 @@ const InputField = props => {
 						color: "black",
 					},
 				}}
-				defaultValue='5000'
+				defaultValue='0.112'
 			/>
 			<Select
 				defaultValue={options[0]}
@@ -110,4 +112,4 @@ const InputField = props => {
 	);
 };
 
-export default InputField;
+export default InputField2;
